@@ -10,7 +10,7 @@ Registration App using Spring Boot Framework
   - Lombok
 
 ## How it works
-This project has two endpoints; the POST is used for signing up users, and the GET is used for confirming a *token* passed as parameter. <br />
+This project has two endpoints; the POST is used for signing up users, and the GET for confirming a *token* passed as parameter. <br />
 
 ## Maildev
 In order to run this project properly, you'll need to install Maildev(SMTP Local Server) <br />
