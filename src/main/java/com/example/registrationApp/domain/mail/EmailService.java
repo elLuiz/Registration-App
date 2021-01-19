@@ -1,6 +1,6 @@
 package com.example.registrationApp.domain.mail;
 
-import com.example.registrationApp.domain.exception.server.ServerException;
+import com.example.registrationApp.domain.exception.server.EmailNotSentException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +32,7 @@ public class EmailService implements EmailSender{
         }catch (MessagingException messagingException){
             LOGGER.warn("Fail to send email:" + messagingException.getMessage());
             LOGGER.warn(messagingException.getLocalizedMessage());
-            throw new ServerException("Could not send email.", 502);
+            throw new EmailNotSentException("Could not send email.", 502);
         }
     }
 }

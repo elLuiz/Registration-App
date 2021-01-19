@@ -29,7 +29,7 @@ public class RegistrationService {
             sendEmail(appUser);
             return "Congrats. We've just sent you an email.";
         }else
-            throw new ClientException("Email already in use.", 400);
+            throw new ClientException(String.format("Email %s is invalid.", registrationModel.getEmail()), 400);
     }
 
     private void sendEmail(AppUser appUser) {
